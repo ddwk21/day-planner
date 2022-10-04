@@ -29,8 +29,9 @@ function init(){
         let textEl = e.target.previousElementSibling;
 
         console.log(textEl)
+        console.log(parentEl)
 
-        localStorage.setItem(parentEl.id, textEl.textContent);
+        localStorage.setItem(parentEl.id, textEl.value);
 
         console.log(localStorage.getItem(parentEl.id))
     })
@@ -55,6 +56,7 @@ function tick(){
     console.log('tick');
 }
 
+tick();
 setInterval(tick, 1000);
 
 
